@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import { createBrowserHistory } from 'history';
 
 //Containers
-import ProductList from './app/containers/productsList/ProductList';
+import ProductList from './app/containers/ProductList';
 
 const store = configureStore;
 const browserHistory = createBrowserHistory();
