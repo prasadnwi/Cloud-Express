@@ -17,11 +17,7 @@ class DashboardContent extends Component {
     }
 }
 
-DashboardContent.propTypes = {
-
-}
-DashboardContent.defaultProps = {
-
-}
+DashboardContent.propTypes = {}
+DashboardContent.defaultProps = {}
 
 export default DashboardContent;

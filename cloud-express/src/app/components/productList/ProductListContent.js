@@ -21,10 +21,8 @@ class ProductListContent extends Component {
 
         return (
             <div className='Product-list-wrapper container-fluid'>
-
-                <div className='row'>
                     {/*show products*/}
-                    <div className='products col-lg-8'>
+                    <div className='products'>
                         <div className='list-content'>
                             {
                                 products.map((product) => {
@@ -35,13 +33,6 @@ class ProductListContent extends Component {
                             }
                         </div>
                     </div>
-
-                    {/*show cart*/}
-                    <div className='cart col-lg-4'>
-
-                    </div>
-                </div>
-
             </div>
         );
     }
