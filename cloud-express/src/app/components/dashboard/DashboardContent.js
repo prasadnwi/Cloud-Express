@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import '../../../scss/dashboard/dashboardContent.css';
 import {DASHBOARD} from '../../constants/titles';
 
-class DashboardContnt extends Component {
+class DashboardContent extends Component {
     render() {
         return (
             <div className='Dashboard-content container-fluid'>
@@ -16,4 +17,11 @@ class DashboardContnt extends Component {
     }
 }
 
-export default DashboardContnt;
+DashboardContent.propTypes = {
+
+}
+DashboardContent.defaultProps = {
+
+}
+
+export default DashboardContent;

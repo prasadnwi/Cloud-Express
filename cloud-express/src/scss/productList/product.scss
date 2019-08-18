@@ -1,0 +1,42 @@
+@import '../constants/colors';
+
+.Product {
+  width: 20vw;
+  height: 32vh;
+  background-color: $honeyDew;
+  margin-top: 1vw;
+
+  .item-image {
+    img {
+      max-width: 15vw;
+      max-height: 15vh;
+      margin-left: 10vh;
+      margin-top: 1vh;
+    }
+  }
+
+  .item-details {
+    max-height: 5vh;
+    margin-top: 2vh;
+
+    .name {
+      text-overflow: ellipsis;
+    }
+
+    .price {
+    }
+  }
+
+  .cart {
+    i {
+      font-size: 4vh;
+    }
+
+    .add-cart {
+      text-align: center;
+      width: 20vw;
+      background-color: #D2691E;
+    }
+  }
+
+}
