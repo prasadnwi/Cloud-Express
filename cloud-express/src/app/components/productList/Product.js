@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
+import '../../../scss/productList/product.css';
 
-class ProductList extends Component {
+class Product extends Component {
     render() {
         return (
             <div>
-                i am product list
+
             </div>
         );
     }
 }
 
-export default ProductList;
+export default Product;

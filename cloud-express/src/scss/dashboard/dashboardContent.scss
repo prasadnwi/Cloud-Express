@@ -1,0 +1,16 @@
+@import '../constants/colors';
+.Dashboard-content{
+  .page-title{
+    background-color: $lightGray;
+    span{
+      font-size: 5vw;
+    }
+    .chocolate{
+      color: $chocolate;
+      margin-left: 10vw;
+    }
+   .goldenrod{
+      color: $goldenrod;
+   }
+  }
+}
