@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 //components
 import Dashboard from "./Dashboard";
@@ -15,4 +16,11 @@ class ProductList extends Component {
     }
 }
 
+ProductList.propTypes = {
+
+}
+
+ProductList.defaultProps = {
+
+}
 export default ProductList;
