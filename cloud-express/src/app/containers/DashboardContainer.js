@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-
 // components
 import DashboardContent from "../components/dashboard/DashboardContent";
 
-class Dashboard extends Component {
+class DashboardContainer extends Component {
     render() {
         return (
             <div>
@@ -14,12 +12,8 @@ class Dashboard extends Component {
     }
 }
 
-Dashboard.propTypes = {
+DashboardContainer.propTypes = {}
 
-}
+DashboardContainer.defaultProps = {}
 
-Dashboard.defaultProps = {
-
-}
-
-export default Dashboard;
+export default DashboardContainer;

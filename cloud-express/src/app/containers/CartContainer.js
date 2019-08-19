@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import CartContent from '../components/cart/CartContent';
 
-class Cart extends Component {
+class CartContainer extends Component {
     render() {
         return (
             <div>
@@ -11,12 +11,8 @@ class Cart extends Component {
     }
 }
 
-Cart.propTypes = {
+CartContainer.propTypes = {}
 
-}
+CartContainer.defaultProps = {}
 
-Cart.defaultProps = {
-
-}
-
-export default Cart;
+export default CartContainer;

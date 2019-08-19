@@ -15,22 +15,22 @@ class ProductListContent extends Component {
             {id: 7, name: 'Fried Potatoes', price: 100, imageName: 'friedPotatoes'},
             {id: 8, name: 'Noodles', price: 100, imageName: 'noodles'},
             {id: 9, name: 'Wine', price: 100, imageName: 'wineGlass'}
-            ];
+        ];
 
         return (
             <div className='Product-list-wrapper container-fluid'>
-                    {/*show products*/}
-                    <div className='products'>
-                        <div className='list-content'>
-                            {
-                                products.map((product) => {
-                                    return (
-                                        <Product item={product} key={product.id}/>
-                                    )
-                                })
-                            }
-                        </div>
+                {/*show products*/}
+                <div className='products'>
+                    <div className='list-content'>
+                        {
+                            products.map((product) => {
+                                return (
+                                    <Product item={product} key={product.id}/>
+                                )
+                            })
+                        }
                     </div>
+                </div>
             </div>
         );
     }
