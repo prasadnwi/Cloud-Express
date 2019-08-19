@@ -1,4 +1,4 @@
-@import '../constants/colors';
+@import '../../constants/colors';
 
 .Product {
   width: 20vw;
@@ -13,8 +13,8 @@
     img {
       max-width: 15vw;
       max-height: 15vh;
-      margin-left: 10vh;
-      margin-top: 1vh;
+      display: block;
+      margin: auto;
     }
   }
 

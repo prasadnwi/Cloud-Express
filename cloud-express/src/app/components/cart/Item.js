@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../../scss/cart/item.css';
+import '../../../scss/component/cart/item.css';
 import PropTypes from 'prop-types';
 
 class Item extends Component {

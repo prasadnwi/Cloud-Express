@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../../scss/cart/cartContent.css';
+import '../../../scss/component/cart/cartContent.css';
 import Item from "./Item";
 
 class CartContent extends Component {
@@ -16,7 +16,7 @@ class CartContent extends Component {
             { name : 'Wine', price : 100, imageName: 'wineGlass'}
         ];
         return (
-            <div className='Cart-content container-fluid'>
+            <div className='Cart-content container'>
                 <div className='col'>
                     <div className='header row'>
                         <p>Order Summary</p>

@@ -1,11 +1,10 @@
 import React from 'react';
-import { Router, Route, Switch} from "react-router-dom";
+import {Route, Router, Switch} from "react-router-dom";
 import configureStore from './app/stores/store';
 import {Provider} from 'react-redux';
-import { createBrowserHistory } from 'history';
-
+import {createBrowserHistory} from 'history';
 //Containers
-import ProductList from './app/containers/ProductList';
+import ProductDetails from "./app/containers/ProductDetails";
 
 const store = configureStore;
 const browserHistory = createBrowserHistory();
@@ -16,7 +15,7 @@ function App() {
     <Router history={browserHistory}>
         <div>
           <Switch>
-              <Route exact path = "/" component={ProductList} />
+              <Route exact path="/" component={ProductDetails}/>
           </Switch>
         </div>
     </Router>

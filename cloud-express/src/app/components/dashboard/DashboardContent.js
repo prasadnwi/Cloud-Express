@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import '../../../scss/dashboard/dashboardContent.css';
+import '../../../scss/component/dashboard/dashboardContent.css';
 import {DASHBOARD} from '../../constants/titles';
 
 class DashboardContent extends Component {

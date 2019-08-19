@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import '../../../scss/productList/product.css';
+import '../../../scss/component/productList/product.css';
 //images
 import apple from '../../../assets/images/products/apple.png';
 import burger from '../../../assets/images/products/burger.png';
