@@ -12,6 +12,7 @@ import drink from "../../../assets/images/products/drink.png";
 import friedPotatoes from "../../../assets/images/products/friedPotatoes.png";
 import noodles from "../../../assets/images/products/noodles.png";
 import wineGlass from "../../../assets/images/products/wineGlass.png";
+import {browserHistory} from "../../../App";
 
 class ProductDetailsContent extends Component {
 
@@ -53,6 +54,11 @@ class ProductDetailsContent extends Component {
         return image;
     }
 
+    onClickBackButton = () => {
+        const url = `product/`;
+        browserHistory.push('/' + url);
+    }
+
     render() {
         let product = {
             name: 'Apple',
@@ -66,7 +72,8 @@ class ProductDetailsContent extends Component {
         return (
             <div className='ProductDetailsContent container-fluid'>
                 <div className='back row'>
-                    <button className="btn"><i className="fa fa-arrow-circle-left"></i></button>
+                    <button className="btn" onClick={this.onClickBackButton}><i className="fa fa-arrow-circle-left"></i>
+                    </button>
                 </div>
                 <div className='row'>
                     {/*image*/}

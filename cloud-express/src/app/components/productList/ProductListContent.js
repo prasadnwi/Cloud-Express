@@ -25,7 +25,7 @@ class ProductListContent extends Component {
                             {
                                 products.map((product) => {
                                     return (
-                                        <Product item = {product}/>
+                                        <Product item={product} key={product.id}/>
                                     )
                                 })
                             }

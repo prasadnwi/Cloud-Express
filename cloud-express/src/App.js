@@ -5,9 +5,10 @@ import {Provider} from 'react-redux';
 import {createBrowserHistory} from 'history';
 //Containers
 import ProductDetails from "./app/containers/ProductDetails";
+import ProductList from "./app/containers/ProductList";
 
 const store = configureStore;
-const browserHistory = createBrowserHistory();
+export const browserHistory = createBrowserHistory();
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
     <Router history={browserHistory}>
         <div>
           <Switch>
-              <Route exact path="/" component={ProductDetails}/>
+              <Route exact path="/product" component={ProductList}/>
+              <Route exact path="/product/:id" component={ProductDetails}/>
+              <Route path="/" component={ProductList}/>
           </Switch>
         </div>
     </Router>
