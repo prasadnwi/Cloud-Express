@@ -8,13 +8,13 @@ class Item extends Component {
         return (
             <div className='Item container-fluid'>
                 <div className='row'>
-                    <div className='col-lg-7'>
+                    <div className='name col-lg-7'>
                         {item.name}
                     </div>
-                    <div className='col-lg-2'>
+                    <div className='count col-lg-2'>
                         *2
                     </div>
-                    <div className='col-lg-3'>
+                    <div className='price col-lg-3'>
                         {item.price}
                     </div>
                 </div>

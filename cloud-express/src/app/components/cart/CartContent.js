@@ -30,6 +30,18 @@ class CartContent extends Component {
                             })
                         }
                     </div>
+                    <div className='total-amount'>
+                        <p>Total RS 10245</p>
+                    </div>
+                    <div className='discounted-amount'>
+                        <p>Discount RS 10245</p>
+                    </div>
+                    <div className='tax-amount'>
+                        <p>Tax RS 10245</p>
+                    </div>
+                    <div className='final-amount'>
+                        <p>Final amount RS 10245</p>
+                    </div>
                 </div>
             </div>
         );
