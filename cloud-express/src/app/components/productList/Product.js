@@ -55,7 +55,7 @@ class Product extends Component {
     render() {
         const {item} = this.props;
         return (
-            <div className='Product container'>
+            <div className='Product container-fluid'>
                 <div className='col'>
                     {/*image*/}
                     <div className='item-image row'>

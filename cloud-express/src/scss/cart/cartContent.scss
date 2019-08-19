@@ -1,0 +1,27 @@
+@import '../../scss/constants/colors';
+.Cart-content{
+  background-color: $lightGray;
+  margin-top: 3vh;
+  .header{
+
+  }
+  .items{
+
+  }
+
+  .total-amount {
+    margin-top: 1vh;
+  }
+
+  .discounted-amount {
+    margin-top: 1vh;
+  }
+
+  .tax-amount {
+    margin-top: 1vh;
+  }
+
+  .final-amount {
+
+  }
+}
