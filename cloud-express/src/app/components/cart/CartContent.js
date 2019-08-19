@@ -1,31 +1,31 @@
 import React, {Component} from 'react';
-import '../../../scss/cart/cartContent.css';
+import '../../../scss/component/cart/cartContent.css';
 import Item from "./Item";
 
 class CartContent extends Component {
     render() {
         let products = [
-            { name : 'Apple', price : 100, imageName: 'apple'},
-            { name : 'Burger', price : 100, imageName: 'burger'},
-            { name : 'Champagne', price : 100, imageName: 'champagne'},
-            { name : 'Coffee', price : 100, imageName: 'coffeeCup'},
-            { name : 'Cola', price : 100, imageName: 'cola'},
-            { name : 'Water', price : 100, imageName: 'water'},
-            { name : 'Fried Potatoes', price : 100, imageName: 'friedPotatoes'},
-            { name : 'Noodles', price : 100, imageName: 'noodles'},
-            { name : 'Wine', price : 100, imageName: 'wineGlass'}
+            {id: 1, name: 'Apple', price: 100, imageName: 'apple'},
+            {id: 2, name: 'Burger', price: 100, imageName: 'burger'},
+            {id: 3, name: 'Champagne', price: 100, imageName: 'champagne'},
+            {id: 4, name: 'Coffee', price: 100, imageName: 'coffeeCup'},
+            {id: 5, name: 'Cola', price: 100, imageName: 'cola'},
+            {id: 6, name: 'Water', price: 100, imageName: 'water'},
+            {id: 7, name: 'Fried Potatoes', price: 100, imageName: 'friedPotatoes'},
+            {id: 8, name: 'Noodles', price: 100, imageName: 'noodles'},
+            {id: 9, name: 'Wine', price: 100, imageName: 'wineGlass'}
         ];
         return (
-            <div className='Cart-content container-fluid'>
+            <div className='Cart-content container'>
                 <div className='col'>
                     <div className='header row'>
                         <p>Order Summary</p>
                     </div>
                     <div className='items'>
                         {
-                            products.map((item) => {
+                            products.map((product) => {
                                 return(
-                                    <Item item={item}/>
+                                    <Item item={product} key={product.id}/>
                                 )
                             })
                         }

@@ -1,0 +1,33 @@
+@import '../../constants/colors';
+
+.ProductDetailsContent {
+  margin-left: 3vw;
+  margin-bottom: 2vh;
+
+  .back {
+    i {
+      font-size: 4vw;
+    }
+
+  }
+
+  .image {
+    margin-top: 3vh;
+
+    img {
+      width: 20vw;
+      height: 20vw;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .details {
+    background-color: $lightGray;
+    margin-top: 3vh;
+  }
+
+  .cart {
+
+  }
+}

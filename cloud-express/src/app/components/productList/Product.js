@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import '../../../scss/productList/product.css';
+import '../../../scss/component/productList/product.css';
+import {browserHistory} from '../../../App';
 //images
 import apple from '../../../assets/images/products/apple.png';
 import burger from '../../../assets/images/products/burger.png';
@@ -52,13 +53,18 @@ class Product extends Component {
         return image;
     }
 
+    onClickProduct = () => {
+        const url = `product/${this.props.item.id}`;
+        browserHistory.push('/' + url);
+    }
+
     render() {
         const {item} = this.props;
         return (
             <div className='Product container-fluid'>
                 <div className='col'>
                     {/*image*/}
-                    <div className='item-image row'>
+                    <div className='item-image row' onClick={this.onClickProduct}>
                         <img src={this.setImage()}/>
                     </div>
                     {/*details*/}
