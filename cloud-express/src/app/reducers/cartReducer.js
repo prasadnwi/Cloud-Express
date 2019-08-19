@@ -12,6 +12,12 @@ const cartReducer = (state = initialState, action) => {
                 ...state,
                 newlyAddedItem: action.payload.item
             };
+
+        case ActionTypes.CART.UPDATE_CART:
+            return {
+                ...state,
+                items: action.payload.items
+            };
         default:
             return state;
     }

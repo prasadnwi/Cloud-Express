@@ -14,6 +14,7 @@ class CartContainer extends Component {
                 <CartContent
                     items={this.props.items}
                     newlyAddedItem={this.props.newlyAddedItem}
+                    updateCart={this.props.actions.updateCart}
                 />
             </div>
         );
