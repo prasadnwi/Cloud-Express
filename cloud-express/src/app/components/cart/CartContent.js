@@ -128,16 +128,28 @@ class CartContent extends Component {
                                     }
                                 </div>
                                 <div className='total-amount'>
-                                    <p>Total RS {calculatedDetails.total}</p>
+                                    <div className='row'>
+                                        <div className='col-lg-8'>Total</div>
+                                        <div className='col-lg-4'>Rs {calculatedDetails.total}</div>
+                                    </div>
                                 </div>
                                 <div className='discounted-amount'>
-                                    <p>Discount RS {calculatedDetails.discountedAmount}</p>
+                                    <div className='row'>
+                                        <div className='col-lg-8'>Discount</div>
+                                        <div className='col-lg-4'>Rs {calculatedDetails.discountedAmount}</div>
+                                    </div>
                                 </div>
                                 <div className='tax-amount'>
-                                    <p>Tax RS {calculatedDetails.tax}</p>
+                                    <div className='row'>
+                                        <div className='col-lg-8'>Tax</div>
+                                        <div className='col-lg-4'>Rs {calculatedDetails.tax}</div>
+                                    </div>
                                 </div>
                                 <div className='final-amount'>
-                                    <p>Final amount RS {calculatedDetails.finalAmount}</p>
+                                    <div className='row'>
+                                        <div className='col-lg-8'>Final amount</div>
+                                        <div className='col-lg-4'>Rs {calculatedDetails.finalAmount}</div>
+                                    </div>
                                 </div>
                             </div>
                             :

@@ -19,7 +19,7 @@ class Item extends Component {
                         *{item.count}
                     </div>
                     <div className='price col-lg-3'>
-                        {this.getPrice(item.price, item.count)}
+                        Rs{this.getPrice(item.price, item.count)}
                     </div>
                 </div>
             </div>
