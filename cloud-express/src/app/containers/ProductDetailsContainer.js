@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
-import Dashboard from "./Dashboard";
+import DashboardContainer from "./DashboardContainer";
 import ProductDetailsContent from "../components/productDetails/ProductDetailsContent";
 
-class ProductDetails extends Component {
+class ProductDetailsContainer extends Component {
     render() {
         return (
             <div>
-                <Dashboard/>
+                <DashboardContainer/>
                 <ProductDetailsContent/>
             </div>
         );
     }
 }
 
-export default ProductDetails;
+export default ProductDetailsContainer;

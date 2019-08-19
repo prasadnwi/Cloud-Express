@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from "prop-types";
 import '../../../scss/component/productDetails/ProductDetailsContent.css';
-import Cart from "../../containers/Cart";
+import CartContainer from "../../containers/CartContainer";
 //images
 import apple from "../../../assets/images/products/apple.png";
 import burger from "../../../assets/images/products/burger.png";
@@ -122,7 +122,7 @@ class ProductDetailsContent extends Component {
 
                     {/* cart*/}
                     <div className='cart col-lg-4'>
-                        <Cart/>
+                        <CartContainer/>
                     </div>
                 </div>
             </div>
