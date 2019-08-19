@@ -12,10 +12,6 @@ import * as cartActions from '../actions/cartAction';
 
 class ProductListContainer extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         //get all products
         this.props.actions.getProductList();

@@ -52,12 +52,12 @@ class ProductDetailsContent extends Component {
         }
 
         return image;
-    }
+    };
 
     onClickBackButton = () => {
         const url = `product/`;
         browserHistory.push('/' + url);
-    }
+    };
 
     render() {
         let product = {
@@ -67,22 +67,22 @@ class ProductDetailsContent extends Component {
             description: 'this is a test description',
             rating: 4,
             vendor: 'Sri lankan Apple'
-        }
+        };
 
         return (
-            <div className='ProductDetailsContent container-fluid'>
+            <div className='ProductDetailsContent container'>
                 <div className='back row'>
                     <button className="btn" onClick={this.onClickBackButton}><i className="fa fa-arrow-circle-left"></i>
                     </button>
                 </div>
                 <div className='row'>
                     {/*image*/}
-                    <div className='image col-lg-4'>
+                    <div className='image col-lg-4 col-md-4'>
                         <img src={this.setImage()}/>
                     </div>
 
                     {/*details*/}
-                    <div className='details col-lg-3'>
+                    <div className='details col-lg-4 col-md-4'>
                         <div class="row">
                             <label htmlFor="name" className="col-lg-2 col-form-label">Name</label>
                             <div className="col-sm-10">
@@ -121,7 +121,7 @@ class ProductDetailsContent extends Component {
                     </div>
 
                     {/* cart*/}
-                    <div className='cart col-lg-4'>
+                    <div className='cart col-lg-3 col-md-3'>
                         <CartContainer/>
                     </div>
                 </div>
@@ -132,7 +132,7 @@ class ProductDetailsContent extends Component {
 
 ProductDetailsContent.propTypes = {
     id: PropTypes.number
-}
-ProductDetailsContent.defaultProps = {}
+};
+ProductDetailsContent.defaultProps = {};
 
 export default ProductDetailsContent;

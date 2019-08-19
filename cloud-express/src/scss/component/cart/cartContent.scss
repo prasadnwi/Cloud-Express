@@ -1,4 +1,4 @@
-@import "'../constants";
+@import "../../constants/colors";
 .Cart-content{
   background-color: $lightGray;
   margin-top: 3vh;
@@ -10,18 +10,18 @@
   }
 
   .total-amount {
-    margin-top: 1vh;
+    margin-top: 2vh;
   }
 
   .discounted-amount {
-    margin-top: 1vh;
+    margin-top: 2vh;
   }
 
   .tax-amount {
-    margin-top: 1vh;
+    margin-top: 2vh;
   }
 
   .final-amount {
-
+    margin-top: 2vh;
   }
 }

@@ -3,6 +3,10 @@ import '../../../scss/component/cart/item.css';
 import PropTypes from 'prop-types';
 
 class Item extends Component {
+
+    getPrice = (unitPrice, count) => {
+        return unitPrice * count;
+    };
     render() {
         const {item} = this.props;
         return (
@@ -12,10 +16,10 @@ class Item extends Component {
                         {item.name}
                     </div>
                     <div className='count col-lg-2'>
-                        *2
+                        *{item.count}
                     </div>
                     <div className='price col-lg-3'>
-                        {item.price}
+                        Rs{this.getPrice(item.price, item.count)}
                     </div>
                 </div>
             </div>
@@ -25,10 +29,8 @@ class Item extends Component {
 
 Item.propTypes = {
     item : PropTypes.object
-}
+};
 
-Item.defaultProps = {
-
-}
+Item.defaultProps = {};
 
 export default Item;
