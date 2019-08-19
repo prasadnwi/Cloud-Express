@@ -15,6 +15,7 @@ import wineGlass from '../../../assets/images/products/wineGlass.png';
 
 class Product extends Component {
 
+    //set relevant image for product
     setImage = () => {
         let image, imageName = this.props.product.imageName;
         switch (imageName) {
@@ -53,9 +54,15 @@ class Product extends Component {
         return image;
     };
 
+    //show product details
     onClickProduct = () => {
         const url = `product/${this.props.product.id}`;
         browserHistory.push('/' + url);
+    };
+
+    //add item into cart
+    onClickCart = () => {
+        this.props.addItemIntoCart(this.props.product);
     };
 
     render() {
@@ -73,7 +80,8 @@ class Product extends Component {
                         <p className='price col-6'>Rs{product.price}</p>
                     </div>
                     <div className='cart row'>
-                        <button className="btn add-cart"><i className="fa fa-cart-plus"></i></button>
+                        <button className="btn add-cart" onClick={this.onClickCart}><i className="fa fa-cart-plus"></i>
+                        </button>
                     </div>
                 </div>
             </div>

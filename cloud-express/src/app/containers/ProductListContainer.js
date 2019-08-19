@@ -7,7 +7,8 @@ import DashboardContainer from "./DashboardContainer";
 import ProductListContent from "../components/productList/ProductListContent";
 import CartContainer from "./CartContainer";
 //actions
-import * as productListAction from '../actions/productListAction';
+import * as productListActions from '../actions/productListAction';
+import * as cartActions from '../actions/cartAction';
 
 class ProductListContainer extends Component {
 
@@ -27,7 +28,10 @@ class ProductListContainer extends Component {
                 <div className='container'>
                     <div className='row'>
                         <div className='col-lg-8'>
-                            <ProductListContent products={this.props.products}/>
+                            <ProductListContent
+                                products={this.props.products}
+                                addItemIntoCart={this.props.actions.addItemIntoCart}
+                            />
                         </div>
                         <div className='col-lg-4'>
                             <CartContainer/>
@@ -54,7 +58,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        actions: bindActionCreators(productListAction, dispatch)
+        actions: bindActionCreators(Object.assign({}, cartActions, productListActions), dispatch)
     }
 };
 export default connect(mapStateToProps, mapDispatchToProps)(ProductListContainer);

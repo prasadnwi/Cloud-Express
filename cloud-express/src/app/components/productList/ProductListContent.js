@@ -14,7 +14,11 @@ class ProductListContent extends Component {
                         {
                             products.map((product) => {
                                 return (
-                                    <Product product={product} key={product.id}/>
+                                    <Product
+                                        product={product}
+                                        key={product.id}
+                                        addItemIntoCart={this.props.addItemIntoCart}
+                                    />
                                 )
                             })
                         }
