@@ -1,7 +1,8 @@
 import {ActionTypes} from '../constants/actionTypes';
 
 export const initialState = {
-    items: []
+    items: [],
+    newlyAddedItem: {}
 };
 
 const cartReducer = (state = initialState, action) => {
@@ -9,7 +10,7 @@ const cartReducer = (state = initialState, action) => {
         case ActionTypes.CART.ADD_ITEM_INTO_CART:
             return {
                 ...state,
-                items: state.items.concat(action.payload.item)
+                newlyAddedItem: action.payload.item
             };
         default:
             return state;

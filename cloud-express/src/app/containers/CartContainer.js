@@ -11,18 +11,28 @@ class CartContainer extends Component {
     render() {
         return (
             <div>
-                <CartContent items={this.props.items}/>
+                <CartContent
+                    items={this.props.items}
+                    newlyAddedItem={this.props.newlyAddedItem}
+                />
             </div>
         );
     }
 }
 
-CartContainer.propTypes = {items: PropTypes.array};
-CartContainer.defaultProps = {items: []};
+CartContainer.propTypes = {
+    items: PropTypes.array,
+    newlyAddedItem: PropTypes.object
+};
+CartContainer.defaultProps = {
+    items: [],
+    newlyAddedItem: {}
+};
 
 const mapStateToProps = (state) => {
     return {
-        items: state.cartReducer.items
+        items: state.cartReducer.items,
+        newlyAddedItem: state.cartReducer.newlyAddedItem
     }
 };
 
