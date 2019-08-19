@@ -12,8 +12,4 @@ class DashboardContainer extends Component {
     }
 }
 
-DashboardContainer.propTypes = {}
-
-DashboardContainer.defaultProps = {}
-
 export default DashboardContainer;

@@ -5,5 +5,9 @@ export const ActionTypes = {
     CART: {
         ADD_ITEM_INTO_CART: 'ADD_ITEM_INTO_CART',
         UPDATE_CART: 'UPDATE_CART'
+    },
+    PRODUCT_DETAILS: {
+        GET_PRODUCT_DETAIL: 'GET_PRODUCT_DETAIL',
+        CLEAR_PRODUCT_DETAILS: 'CLEAR_PRODUCT_DETAILS'
     }
 };

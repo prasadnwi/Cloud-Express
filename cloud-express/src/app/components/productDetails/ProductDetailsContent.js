@@ -17,8 +17,8 @@ import {browserHistory} from "../../../App";
 class ProductDetailsContent extends Component {
 
     setImage = () => {
-        let image, {id} = this.props;
-        switch (id) {
+        let image, {product} = this.props;
+        switch (product.id) {
             case 1:
                 image = apple;
                 break;
@@ -60,14 +60,7 @@ class ProductDetailsContent extends Component {
     };
 
     render() {
-        let product = {
-            name: 'Apple',
-            price: 100,
-            imageName: 'apple',
-            description: 'this is a test description',
-            rating: 4,
-            vendor: 'Sri lankan Apple'
-        };
+        const product = this.props.product;
 
         return (
             <div className='ProductDetailsContent container'>
@@ -83,39 +76,39 @@ class ProductDetailsContent extends Component {
 
                     {/*details*/}
                     <div className='details col-lg-4 col-md-4'>
-                        <div class="row">
-                            <label htmlFor="name" className="col-lg-2 col-form-label">Name</label>
-                            <div className="col-sm-10">
+                        <div className="row">
+                            <label htmlFor="name" className="col-lg-3 col-form-label">Name</label>
+                            <div className="col-lg-9">
                                 <input type="text" readOnly className="form-control-plaintext" id="name"
-                                       value={product.name}/>
+                                       defaultValue={product.name}/>
                             </div>
                         </div>
                         <div className="row">
-                            <label htmlFor="price" className="col-lg-2 col-form-label">Price</label>
-                            <div className="col-sm-10">
+                            <label htmlFor="price" className="col-lg-3 col-form-label">Price</label>
+                            <div className="col-lg-9">
                                 <input type="text" readOnly className="form-control-plaintext" id="price"
-                                       value={product.price}/>
+                                       defaultValue={product.price}/>
                             </div>
                         </div>
                         <div className="row">
-                            <label htmlFor="description" className="col-lg-2 col-form-label">Description </label>
-                            <div className="col-sm-10">
+                            <label htmlFor="description" className="col-lg-3 col-form-label">Description </label>
+                            <div className="col-lg-9">
                                 <input type="text" readOnly className="form-control-plaintext" id="description"
-                                       value={product.description}/>
+                                       defaultValue={product.description}/>
                             </div>
                         </div>
                         <div className="row">
-                            <label htmlFor="rating" className="col-lg-2 col-form-label">Rating</label>
-                            <div className="col-sm-10">
+                            <label htmlFor="rating" className="col-lg-3 col-form-label">Rating</label>
+                            <div className="col-lg-9">
                                 <input type="text" readOnly className="form-control-plaintext" id="rating"
-                                       value={product.rating}/>
+                                       defaultValue={product.rating}/>
                             </div>
                         </div>
                         <div className="row">
-                            <label htmlFor="vendor" className="col-sm-2 col-form-label">Vendor</label>
-                            <div className="col-sm-10">
+                            <label htmlFor="vendor" className="col-lg-3 col-form-label">Vendor</label>
+                            <div className="col-lg-9">
                                 <input type="text" readOnly className="form-control-plaintext" id="vendor"
-                                       value={product.vendor}/>
+                                       defaultValue={product.vendor}/>
                             </div>
                         </div>
                     </div>
