@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 //components
 import DashboardContainer from "./DashboardContainer";
 import ProductListContent from "../components/productList/ProductListContent";
@@ -9,6 +10,10 @@ import CartContainer from "./CartContainer";
 import * as productListAction from '../actions/productListAction';
 
 class ProductListContainer extends Component {
+
+    constructor(props) {
+        super(props);
+    }
 
     componentDidMount() {
         //get all products
@@ -22,7 +27,7 @@ class ProductListContainer extends Component {
                 <div className='container'>
                     <div className='row'>
                         <div className='col-lg-8'>
-                            <ProductListContent product={this.props.product}/>
+                            <ProductListContent products={this.props.products}/>
                         </div>
                         <div className='col-lg-4'>
                             <CartContainer/>
@@ -34,18 +39,22 @@ class ProductListContainer extends Component {
     }
 }
 
-ProductListContainer.propTypes = {}
-ProductListContainer.defaultProps = {}
+ProductListContainer.propTypes = {
+    products: PropTypes.array
+};
+ProductListContainer.defaultProps = {
+    products: []
+};
 
 const mapStateToProps = (state) => {
     return {
         products: state.productListReducer.products
     }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
         actions: bindActionCreators(productListAction, dispatch)
     }
-}
+};
 export default connect(mapStateToProps, mapDispatchToProps)(ProductListContainer);

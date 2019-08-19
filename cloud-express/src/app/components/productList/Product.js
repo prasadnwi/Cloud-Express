@@ -16,34 +16,34 @@ import wineGlass from '../../../assets/images/products/wineGlass.png';
 class Product extends Component {
 
     setImage = () => {
-        let image,imageName = this.props.item.imageName;
+        let image, imageName = this.props.product.imageName;
         switch (imageName) {
             case 'apple':
-                image =  apple;
+                image = apple;
                 break;
             case 'burger':
-                image =  burger;
+                image = burger;
                 break;
             case 'champagne':
-                image =  champagne;
+                image = champagne;
                 break;
             case 'coffeeCup':
-                image =  coffeeCup;
+                image = coffeeCup;
                 break;
             case 'cola':
-                image =  cola;
+                image = cola;
                 break;
             case 'drink':
-                image =  drink;
+                image = drink;
                 break;
             case 'friedPotatoes':
-                image =  friedPotatoes;
+                image = friedPotatoes;
                 break;
             case 'noodles':
-                image =  noodles;
+                image = noodles;
                 break;
             case 'wineGlass':
-                image =  wineGlass;
+                image = wineGlass;
                 break;
             default:
                 image = apple;
@@ -51,15 +51,15 @@ class Product extends Component {
         }
 
         return image;
-    }
+    };
 
     onClickProduct = () => {
-        const url = `product/${this.props.item.id}`;
+        const url = `product/${this.props.product.id}`;
         browserHistory.push('/' + url);
-    }
+    };
 
     render() {
-        const {item} = this.props;
+        const {product} = this.props;
         return (
             <div className='Product container-fluid'>
                 <div className='col'>
@@ -69,16 +69,12 @@ class Product extends Component {
                     </div>
                     {/*details*/}
                     <div className='item-details row'>
-                        <p className='name col-6'>{item.name}</p>
-                        <p className='price col-6'>Rs{item.price}</p>
+                        <p className='name col-6'>{product.name}</p>
+                        <p className='price col-6'>Rs{product.price}</p>
                     </div>
                     <div className='cart row'>
                         <button className="btn add-cart"><i className="fa fa-cart-plus"></i></button>
                     </div>
-                </div>
-
-                <div>
-
                 </div>
             </div>
         );
@@ -86,10 +82,10 @@ class Product extends Component {
 }
 
 Product.propTypes = {
-    item: PropTypes.object,
-}
+    product: PropTypes.object,
+};
 Product.defaultProps = {
-
-}
+    product: {}
+};
 
 export default Product;
