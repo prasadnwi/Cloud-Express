@@ -1,20 +1,11 @@
 import React, {Component} from 'react';
 import '../../../scss/component/cart/cartContent.css';
 import Item from "./Item";
+import PropTypes from 'prop-types';
 
 class CartContent extends Component {
     render() {
-        let products = [
-            {id: 1, name: 'Apple', price: 100, imageName: 'apple'},
-            {id: 2, name: 'Burger', price: 100, imageName: 'burger'},
-            {id: 3, name: 'Champagne', price: 100, imageName: 'champagne'},
-            {id: 4, name: 'Coffee', price: 100, imageName: 'coffeeCup'},
-            {id: 5, name: 'Cola', price: 100, imageName: 'cola'},
-            {id: 6, name: 'Water', price: 100, imageName: 'water'},
-            {id: 7, name: 'Fried Potatoes', price: 100, imageName: 'friedPotatoes'},
-            {id: 8, name: 'Noodles', price: 100, imageName: 'noodles'},
-            {id: 9, name: 'Wine', price: 100, imageName: 'wineGlass'}
-        ];
+        const {items} = this.props;
         return (
             <div className='Cart-content container'>
                 <div className='col'>
@@ -23,9 +14,9 @@ class CartContent extends Component {
                     </div>
                     <div className='items'>
                         {
-                            products.map((product) => {
+                            items.map((item) => {
                                 return(
-                                    <Item item={product} key={product.id}/>
+                                    <Item item={item} key={item.id}/>
                                 )
                             })
                         }
@@ -49,11 +40,11 @@ class CartContent extends Component {
 }
 
 CartContent.propTypes = {
-
-}
+    items: PropTypes.array
+};
 
 CartContent.defaultProps = {
-
-}
+    items: []
+};
 
 export default CartContent;
