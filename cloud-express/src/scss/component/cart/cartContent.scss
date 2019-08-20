@@ -1,12 +1,21 @@
 @import "../../constants/colors";
 .Cart-content{
-  background-color: $lightGray;
+  background-color: $Gainsboro;
   margin-top: 3vh;
+  border-radius: 10px;
   .header{
-
+    p {
+      margin-top: 3vh;
+    }
   }
   .items{
 
+  }
+
+  .no-items {
+    p {
+      margin-bottom: 3vh;
+    }
   }
 
   .total-amount {
@@ -23,5 +32,6 @@
 
   .final-amount {
     margin-top: 2vh;
+    margin-bottom: 4vh;
   }
 }

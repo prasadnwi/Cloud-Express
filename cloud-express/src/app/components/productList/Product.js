@@ -72,7 +72,7 @@ class Product extends Component {
                 <div className='col'>
                     {/*image*/}
                     <div className='item-image row' onClick={this.onClickProduct}>
-                        <img src={this.setImage()}/>
+                        <img src={this.setImage()} alt={`product-${product.name}`}/>
                     </div>
                     {/*details*/}
                     <div className='item-details row'>

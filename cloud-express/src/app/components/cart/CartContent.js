@@ -26,7 +26,7 @@ class CartContent extends Component {
         this.hasItems = items.length > 0 ? true : false;
     };
 
-    componentWillReceiveProps(nextProps, nextContext) {
+    UNSAFE_componentWillReceiveProps(nextProps, nextContext) {
         this.updateCart(nextProps);
     }
 
@@ -62,26 +62,25 @@ class CartContent extends Component {
     };
 
     formatItems = (item) => {
-        let formatedItem = item;
-        formatedItem.count = 1;
-        return formatedItem;
+        let formattedItem = item;
+        formattedItem.count = 1;
+        return formattedItem;
     };
     // this method calculate total amount
     calculateTotalPrice = (items) => {
-        let total = 0, totalForItem = 0;
+        let total = 0, totalForItem = 0, i;
         if (items) {
-            items.map((item) => {
-                totalForItem = item.count * item.price;
+            for (i = 0; i < items.length; i++) {
+                totalForItem = items[i].count * items[i].price;
                 total += totalForItem;
-            });
+            }
         }
         return total;
     };
 
     //this method calculate total discount
     calculateTotalDiscount = (totalAmount) => {
-        const numberOfDiscountPoints = Math.floor(totalAmount / 500);
-        return (500 * 0.02 * numberOfDiscountPoints);
+        return (500 * 0.02 * (Math.floor(totalAmount / 500)));
     };
 
     //this method calculate total tax
@@ -99,9 +98,9 @@ class CartContent extends Component {
         const discountedAmount = this.calculateTotalDiscount(total);
         const tax = this.calculateTotalTax(total);
         return {
-            total: total,
-            discountedAmount: discountedAmount,
-            tax: tax,
+            total,
+            discountedAmount,
+            tax,
             finalAmount: this.calculateFinalAmount(total, tax, discountedAmount)
         };
     };
@@ -153,8 +152,8 @@ class CartContent extends Component {
                                 </div>
                             </div>
                             :
-                            <div>
-                                No items
+                            <div className='no-items'>
+                                <p>No items</p>
                             </div>
                     }
                 </div>

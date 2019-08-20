@@ -71,7 +71,7 @@ class ProductDetailsContent extends Component {
                 <div className='row'>
                     {/*image*/}
                     <div className='image col-lg-4 col-md-4'>
-                        <img src={this.setImage()}/>
+                        <img src={this.setImage()} alt={`product-${product.name}`}/>
                     </div>
 
                     {/*details*/}

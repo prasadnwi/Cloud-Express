@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "history": "^4.9.0",
+    "jest": "^24.9.0",
     "prop-types": "latest",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -16,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

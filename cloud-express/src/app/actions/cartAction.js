@@ -1,10 +1,10 @@
 import {ActionTypes} from '../constants/actionTypes';
 
-export const addItemIntoCart = (addedItem) => dispatch => {
+export const addItemIntoCart = (item) => dispatch => {
     dispatch({
         type: ActionTypes.CART.ADD_ITEM_INTO_CART,
         payload: {
-            item: addedItem
+            item
         }
     });
 
@@ -19,11 +19,11 @@ export const addItemIntoCart = (addedItem) => dispatch => {
     }, 100);
 };
 
-export const updateCart = (updatedCart) => (dispatch) => {
+export const updateCart = (items) => (dispatch) => {
     dispatch({
         type: ActionTypes.CART.UPDATE_CART,
         payload: {
-            items: updatedCart
+            items
         }
     })
 };
