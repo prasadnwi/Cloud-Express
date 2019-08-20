@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../../../scss/component/dashboard/dashboardContent.css';
+//components
 import {DASHBOARD} from '../../constants/titles';
 
 class DashboardContent extends Component {
@@ -15,8 +16,5 @@ class DashboardContent extends Component {
         );
     }
 }
-
-DashboardContent.propTypes = {};
-DashboardContent.defaultProps = {};
 
 export default DashboardContent;

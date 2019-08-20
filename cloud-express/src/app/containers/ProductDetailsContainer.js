@@ -24,7 +24,7 @@ class ProductDetailsContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div id='product-details-container'>
                 <DashboardContainer/>
                 <ProductDetailsContent product={this.props.product}/>
             </div>

@@ -5,7 +5,7 @@ export const getProductList = () => dispatch => {
     dispatch({
         type: ActionTypes.PRODUCT_LIST.GET_ALL_PRODUCTS,
         payload: {
-            products: products
+            products
         }
     });
 };

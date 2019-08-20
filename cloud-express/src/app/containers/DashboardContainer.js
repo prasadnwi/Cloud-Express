@@ -5,7 +5,7 @@ import DashboardContent from "../components/dashboard/DashboardContent";
 class DashboardContainer extends Component {
     render() {
         return (
-            <div>
+            <div id='dashboard-container'>
                 <DashboardContent/>
             </div>
         );

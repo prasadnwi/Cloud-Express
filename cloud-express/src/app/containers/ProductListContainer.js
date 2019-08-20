@@ -21,7 +21,7 @@ class ProductListContainer extends Component {
         return (
             <div>
                 <DashboardContainer/>
-                <div className='container'>
+                <div className='container' id='product-list-container'>
                     <div className='row'>
                         <div className='col-lg-8'>
                             <ProductListContent

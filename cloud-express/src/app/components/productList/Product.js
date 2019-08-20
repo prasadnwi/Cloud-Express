@@ -68,21 +68,25 @@ class Product extends Component {
     render() {
         const {product} = this.props;
         return (
-            <div className='Product container-fluid'>
+            <div className='Product container-fluid' id='Product'>
                 <div className='col'>
+
                     {/*image*/}
-                    <div className='item-image row' onClick={this.onClickProduct}>
+                    <div className='item-image row' onClick={this.onClickProduct} id='cart-image'>
                         <img src={this.setImage()} alt={`product-${product.name}`}/>
                     </div>
+
                     {/*details*/}
-                    <div className='item-details row'>
+                    <div className='item-details row' id='product-details'>
                         <p className='name col-6'>{product.name}</p>
                         <p className='price col-6'>Rs{product.price}</p>
                     </div>
-                    <div className='cart row'>
-                        <button className="btn add-cart" onClick={this.onClickCart}><i className="fa fa-cart-plus"></i>
+                    <div className='cart row' id='add-cart'>
+                        <button className="btn add-cart" onClick={this.onClickCart}>
+                            <i className="fa fa-cart-plus"></i>
                         </button>
                     </div>
+
                 </div>
             </div>
         );

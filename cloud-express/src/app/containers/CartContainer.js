@@ -10,7 +10,7 @@ import * as cartActions from '../actions/cartAction';
 class CartContainer extends Component {
     render() {
         return (
-            <div>
+            <div id='cart-container'>
                 <CartContent
                     items={this.props.items}
                     newlyAddedItem={this.props.newlyAddedItem}

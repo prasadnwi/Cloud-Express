@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from "prop-types";
 import '../../../scss/component/productDetails/ProductDetailsContent.css';
-import CartContainer from "../../containers/CartContainer";
 //images
 import apple from "../../../assets/images/products/apple.png";
 import burger from "../../../assets/images/products/burger.png";
@@ -69,6 +68,7 @@ class ProductDetailsContent extends Component {
                     </button>
                 </div>
                 <div className='row'>
+
                     {/*image*/}
                     <div className='image col-lg-4 col-md-4'>
                         <img src={this.setImage()} alt={`product-${product.name}`}/>
@@ -114,9 +114,9 @@ class ProductDetailsContent extends Component {
                     </div>
 
                     {/* cart*/}
-                    <div className='cart col-lg-3 col-md-3'>
-                        <CartContainer/>
-                    </div>
+                    {/*<div className='cart col-lg-3 col-md-3'>*/}
+                    {/*    <CartContainer/>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         );

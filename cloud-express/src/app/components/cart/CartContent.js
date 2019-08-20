@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import '../../../scss/component/cart/cartContent.css';
-import Item from "./Item";
 import PropTypes from 'prop-types';
+import {CART} from '../../constants/titles'
+//components
+import Item from "./Item";
 
 class CartContent extends Component {
 
@@ -17,6 +19,7 @@ class CartContent extends Component {
         this.setPropsToState();
     }
 
+    //set props values to local
     setPropsToState = () => {
         let {items} = this.state;
         items = this.props.items;
@@ -30,6 +33,7 @@ class CartContent extends Component {
         this.updateCart(nextProps);
     }
 
+    // update the cart when a new item is added
     updateCart = (newProps) => {
 
         let resultIndex, {items} = this.state;
@@ -61,11 +65,13 @@ class CartContent extends Component {
         this.props.updateCart(items);
     };
 
+    // to add a count for items
     formatItems = (item) => {
         let formattedItem = item;
         formattedItem.count = 1;
         return formattedItem;
     };
+
     // this method calculate total amount
     calculateTotalPrice = (items) => {
         let total = 0, totalForItem = 0, i;
@@ -109,15 +115,15 @@ class CartContent extends Component {
         const {items} = this.state;
         const calculatedDetails = this.calculateDetails(items);
         return (
-            <div className='Cart-content container'>
+            <div className='Cart-content container' id='cart-content'>
                 <div className='col'>
                     <div className='header row'>
-                        <p>Order Summary</p>
+                        <p>{CART.CART_TITLE.FIRST_NAME} {CART.CART_TITLE.LAST_NAME}</p>
                     </div>
                     {
                         this.hasItems ?
                             <div>
-                                <div className='items'>
+                                <div className='items' id='items'>
                                     {
                                         items.map((item) => {
                                             return (
@@ -126,34 +132,36 @@ class CartContent extends Component {
                                         })
                                     }
                                 </div>
-                                <div className='total-amount'>
+                                <div className='total-amount' id='total-amount'>
                                     <div className='row'>
-                                        <div className='col-lg-8'>Total</div>
-                                        <div className='col-lg-4'>Rs {calculatedDetails.total}</div>
+                                        <div className='col-lg-8'>{CART.CART_PROPERTY.TOTAL}</div>
+                                        <div className='col-lg-4'>{CART.CURRENCY.RS} {calculatedDetails.total}</div>
                                     </div>
                                 </div>
-                                <div className='discounted-amount'>
+                                <div className='discounted-amount' id='discounted-amount'>
                                     <div className='row'>
-                                        <div className='col-lg-8'>Discount</div>
-                                        <div className='col-lg-4'>Rs {calculatedDetails.discountedAmount}</div>
+                                        <div className='col-lg-8'>{CART.CART_PROPERTY.DISCOUNT}</div>
+                                        <div
+                                            className='col-lg-4'>{CART.CURRENCY.RS} {calculatedDetails.discountedAmount}</div>
                                     </div>
                                 </div>
-                                <div className='tax-amount'>
+                                <div className='tax-amount' id='tax-amount'>
                                     <div className='row'>
-                                        <div className='col-lg-8'>Tax</div>
-                                        <div className='col-lg-4'>Rs {calculatedDetails.tax}</div>
+                                        <div className='col-lg-8'>{CART.CART_PROPERTY.TAX}</div>
+                                        <div className='col-lg-4'>{CART.CURRENCY.RS} {calculatedDetails.tax}</div>
                                     </div>
                                 </div>
-                                <div className='final-amount'>
+                                <div className='final-amount' id='final-amount'>
                                     <div className='row'>
-                                        <div className='col-lg-8'>Final amount</div>
-                                        <div className='col-lg-4'>Rs {calculatedDetails.finalAmount}</div>
+                                        <div className='col-lg-8'>{CART.CART_PROPERTY.FINAL_AMOUNT}</div>
+                                        <div
+                                            className='col-lg-4'>{CART.CURRENCY.RS} {calculatedDetails.finalAmount}</div>
                                     </div>
                                 </div>
                             </div>
                             :
-                            <div className='no-items'>
-                                <p>No items</p>
+                            <div className='no-items' id='no-items'>
+                                <p>{CART.MESSAGES.NO_ITEM}</p>
                             </div>
                     }
                 </div>

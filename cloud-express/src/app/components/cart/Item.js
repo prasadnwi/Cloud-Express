@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import '../../../scss/component/cart/item.css';
 import PropTypes from 'prop-types';
+import {CART} from "../../constants/titles";
 
 class Item extends Component {
 
     getPrice = (unitPrice, count) => {
         return unitPrice * count;
     };
+
     render() {
         const {item} = this.props;
         return (
@@ -19,7 +21,7 @@ class Item extends Component {
                         *{item.count}
                     </div>
                     <div className='price col-lg-3'>
-                        Rs{this.getPrice(item.price, item.count)}
+                        {CART.CURRENCY.RS}{this.getPrice(item.price, item.count)}
                     </div>
                 </div>
             </div>
@@ -31,6 +33,8 @@ Item.propTypes = {
     item : PropTypes.object
 };
 
-Item.defaultProps = {};
+Item.defaultProps = {
+    item: {}
+};
 
 export default Item;
