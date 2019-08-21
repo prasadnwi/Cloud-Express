@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-// reducers
+// actions
 import productListReducer from './productListReducer';
 import cartReducer from './cartReducer';
 import productDetailsReducer from './productDetailsReducer';

@@ -1,0 +1,28 @@
+const cartCalculation = {
+
+    calculateTotalPrice: (items) => {
+        let total = 0, totalForItem = 0, i;
+        if (items) {
+            for (i = 0; i < items.length; i++) {
+                totalForItem = (items[i].count && items[i].price) ? (items[i].count * items[i].price) : 0;
+                total += totalForItem;
+            }
+        }
+        return total;
+    },
+
+    calculateTotalDiscount: (totalAmount) => {
+        return (500 * 0.02 * (Math.floor(totalAmount / 500)));
+    },
+
+    calculateTotalTax: (totalAmount, taxPercentage) => {
+        return totalAmount * taxPercentage;
+    },
+
+    calculateFinalAmount: (totalAmount, tax, discount) => {
+        return (totalAmount + tax - discount);
+    }
+};
+
+export default cartCalculation;
+

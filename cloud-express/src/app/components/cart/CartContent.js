@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import '../../../scss/component/cart/cartContent.css';
 import PropTypes from 'prop-types';
-import {CART} from '../../constants/titles'
+import {CART} from '../../constants/titles';
+import cartCalculation from '../../utills/cartCalculation';
 //components
 import Item from "./Item";
 
@@ -65,49 +66,22 @@ class CartContent extends Component {
         this.props.updateCart(items);
     };
 
-    // to add a count for items
+    // to add a count for testData
     formatItems = (item) => {
         let formattedItem = item;
         formattedItem.count = 1;
         return formattedItem;
     };
 
-    // this method calculate total amount
-    calculateTotalPrice = (items) => {
-        let total = 0, totalForItem = 0, i;
-        if (items) {
-            for (i = 0; i < items.length; i++) {
-                totalForItem = items[i].count * items[i].price;
-                total += totalForItem;
-            }
-        }
-        return total;
-    };
-
-    //this method calculate total discount
-    calculateTotalDiscount = (totalAmount) => {
-        return (500 * 0.02 * (Math.floor(totalAmount / 500)));
-    };
-
-    //this method calculate total tax
-    calculateTotalTax = (totalAmount) => {
-        return totalAmount * 0.12;
-    };
-
-    //calculate final amount
-    calculateFinalAmount = (totalAmount, tax, discount) => {
-        return (totalAmount + tax - discount);
-    };
-
     calculateDetails = (items) => {
-        const total = this.calculateTotalPrice(items);
-        const discountedAmount = this.calculateTotalDiscount(total);
-        const tax = this.calculateTotalTax(total);
+        const total = cartCalculation.calculateTotalPrice(items);
+        const discountedAmount = cartCalculation.calculateTotalDiscount(total);
+        const tax = cartCalculation.calculateTotalTax(total);
         return {
             total,
             discountedAmount,
             tax,
-            finalAmount: this.calculateFinalAmount(total, tax, discountedAmount)
+            finalAmount: cartCalculation.calculateFinalAmount(total, tax, discountedAmount)
         };
     };
 
