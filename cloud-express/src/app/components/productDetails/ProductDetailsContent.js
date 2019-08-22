@@ -15,6 +15,7 @@ import {browserHistory} from "../../../App";
 
 class ProductDetailsContent extends Component {
 
+    //to set product image
     setImage = () => {
         let image, {product} = this.props;
         switch (product.id) {
@@ -53,6 +54,7 @@ class ProductDetailsContent extends Component {
         return image;
     };
 
+    // to redirect to home page
     onClickBackButton = () => {
         const url = `product/`;
         browserHistory.push('/' + url);
@@ -70,53 +72,50 @@ class ProductDetailsContent extends Component {
                 <div className='row'>
 
                     {/*image*/}
-                    <div className='image col-lg-4 col-md-4'>
+                    <div className='image col-lg-6 col-md-12 col-sm-12'>
                         <img src={this.setImage()} alt={`product-${product.name}`}/>
                     </div>
 
                     {/*details*/}
-                    <div className='details col-lg-4 col-md-4'>
-                        <div className="row">
-                            <label htmlFor="name" className="col-lg-3 col-form-label">Name</label>
-                            <div className="col-lg-9">
+                    <div className='details col-lg-4 col-md-9 col-sm-12'>
+                        <div className="row col-lg-12 col-md-12 col-sm-12">
+                            <label htmlFor="name" className="col-lg-4 col-md-4 col-sm-4 col-form-label">Name</label>
+                            <div className="col-lg-8 col-md-6 col-sm-4">
                                 <input type="text" readOnly className="form-control-plaintext" id="name"
                                        defaultValue={product.name}/>
                             </div>
                         </div>
-                        <div className="row">
-                            <label htmlFor="price" className="col-lg-3 col-form-label">Price</label>
-                            <div className="col-lg-9">
+                        <div className="row col-lg-12 col-md-12 col-sm-12">
+                            <label htmlFor="price" className="col-lg-4 col-md-4 col-sm-4 col-form-label">Price</label>
+                            <div className="col-lg-8 col-md-6 col-sm-4">
                                 <input type="text" readOnly className="form-control-plaintext" id="price"
                                        defaultValue={product.price}/>
                             </div>
                         </div>
-                        <div className="row">
-                            <label htmlFor="description" className="col-lg-3 col-form-label">Description </label>
-                            <div className="col-lg-9">
+                        <div className="row col-lg-12 col-md-12 col-sm-12">
+                            <label htmlFor="description"
+                                   className="col-lg-4 col-md-4 col-sm-4 col-form-label">Description </label>
+                            <div className="col-lg-8 col-md-6 col-sm-4">
                                 <input type="text" readOnly className="form-control-plaintext" id="description"
                                        defaultValue={product.description}/>
                             </div>
                         </div>
-                        <div className="row">
-                            <label htmlFor="rating" className="col-lg-3 col-form-label">Rating</label>
-                            <div className="col-lg-9">
+                        <div className="row col-lg-12 col-md-12 col-sm-12">
+                            <label htmlFor="rating" className="col-lg-4 col-md-4 col-sm-4 col-form-label">Rating</label>
+                            <div className="col-lg-8 col-md-6 col-sm-4">
                                 <input type="text" readOnly className="form-control-plaintext" id="rating"
                                        defaultValue={product.rating}/>
                             </div>
                         </div>
-                        <div className="row">
-                            <label htmlFor="vendor" className="col-lg-3 col-form-label">Vendor</label>
-                            <div className="col-lg-9">
+                        <div className="row col-lg-12 col-md-12 col-sm-12">
+                            <label htmlFor="vendor" className="col-lg-4 col-md-4 col-sm-4 col-form-label">Vendor</label>
+                            <div className="col-lg-8 col-md-6 col-sm-4">
                                 <input type="text" readOnly className="form-control-plaintext" id="vendor"
                                        defaultValue={product.vendor}/>
                             </div>
                         </div>
                     </div>
 
-                    {/* cart*/}
-                    {/*<div className='cart col-lg-3 col-md-3'>*/}
-                    {/*    <CartContainer/>*/}
-                    {/*</div>*/}
                 </div>
             </div>
         );

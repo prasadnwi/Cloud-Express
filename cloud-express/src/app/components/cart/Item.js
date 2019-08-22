@@ -5,6 +5,7 @@ import {CART} from "../../constants/titles";
 
 class Item extends Component {
 
+    // to calculate price
     getPrice = (unitPrice, count) => {
         return unitPrice * count;
     };

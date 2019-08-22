@@ -73,10 +73,11 @@ class CartContent extends Component {
         return formattedItem;
     };
 
+    // calculate total amount, discount, tax, final amount
     calculateDetails = (items) => {
         const total = cartCalculation.calculateTotalPrice(items);
         const discountedAmount = cartCalculation.calculateTotalDiscount(total);
-        const tax = cartCalculation.calculateTotalTax(total);
+        const tax = cartCalculation.calculateTotalTax(total, 0.12);
         return {
             total,
             discountedAmount,

@@ -1,6 +1,7 @@
 import {ActionTypes} from '../constants/actionTypes';
 import {products} from "../constants/products";
 
+// get a product details using product id
 export const getProductDetails = (productId) => dispatch => {
     let product = {};
 
